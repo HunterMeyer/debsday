@@ -10,6 +10,7 @@ class MessagesController < ApplicationController
       flash[:success] = 'Thank you'
       redirect_to root_path
     else
+      render 'new'
       # flash[:warning] = @message.errors.each { |x,y| puts "#{x.to_s} #{y.to_s}".titleize }
       flash[:warning] = 'Something went wrong'
     end
@@ -17,6 +18,7 @@ class MessagesController < ApplicationController
 
   def destroy
     @message.find(params[:id]).destroy
+    redirect_to root_path
   end
 
   private
