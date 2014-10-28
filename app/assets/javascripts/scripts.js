@@ -1,14 +1,14 @@
 $(document).ready(function() {
-  $("#webcam").scriptcam(
-    width: 640,
-    height: 640,
+  $("#webcam").scriptcam({
+    width: 320,
+    height: 320,
     fileName: 'userVideo',
     connected: enableRecord,
     onError: oopsError,
     maximumTime: 90,
     timeLeft: remaining,
     showDebug: true
-  );
+  });
 
   $('#recordButton').click(function() {
     $.scriptcam.startRecording();
