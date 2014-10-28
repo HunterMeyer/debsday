@@ -1,5 +1,5 @@
 <h1>Welcome</h1>
-</h4>Say Happy 60th to Deb Murphy</h4>
+<h4>Say Happy 60th to Deb Murphy</h4>
 
 <div>
   <%= form_for @message, html: { multipart: true } do |f| %>
@@ -7,25 +7,25 @@
       <%= f.label :name, 'From:' %>
       <%= f.text_field :name, placeholder: 'Your Name', autofocus: true %>
     </div>
-    <div>
-      <%= f.label :photo, 'Upload a Photo of You and Deb' %>
+    <div style='margin-top: 10px;'>
+      <%= f.label :photo, 'Upload a Photo of You and Deb' %><br>
       <%= f.file_field :photo %>
     </div>
-    <div>
-      <%= f.label :video_path, 'Record a Happy Birthday Video' %>
+    <div style='margin-top: 10px;'>
+      <%= f.label :video_path, 'Record a Happy Birthday Video' %><br>
       <%= f.hidden_field :video_path, value: '', id: 'userVideo' %>
       <div id='webcam'></div>
       <div>
         <span id='recordButton' class='hidden'>Record</span>
         <span id='finishButton' class='hidden'>Finish</span>
       </div>
-      <div id='time'><small>You have <span id='timeRemaining'>90</id> seconds remaining</small></div>
-      <div id='waitText'>Please wait while we upload and process your recording...</div>
+      <div id='time' class='hidden'><small>Time remaining: <span id='timeRemaining'></span></small></div>
+      <div id='waitText' class='hidden'>Please wait while we upload and process your recording...</div>
     </div>
     <div>
-      <%= video_tag '#', class: 'hidden', id: '#previewVideo' %>
+      <video class='hidden' id='previewVideo' src='#'></video>
     </div>
-    <div>
+    <div style='margin-top: 10px;'>
       <%= f.submit 'Submit' %>
     </div>
   <% end %>
