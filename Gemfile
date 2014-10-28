@@ -11,6 +11,8 @@ gem 'jbuilder'
 gem 'activeresource'
 gem 'awesome_print'
 gem 'emcee'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :production do
   gem 'rails_12factor'
