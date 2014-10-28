@@ -7,6 +7,8 @@ $(document).ready(function() {
     onError: oopsError,
     maximumTime: 90,
     timeLeft: remaining,
+    fileReady: showVideo,
+    showMicrophoneErrors: true
     showDebug: true
   });
 
@@ -29,7 +31,7 @@ $(document).ready(function() {
 function enableRecord() { $('#recordButton').show(); }
 function oopsError(errorId, errorMsg) { alert(errorMsg); }
 function remaining(time) { $('#timeRemaining').text(time); }
-function fileReady(address) { $('#waitText').hide(); $('#previewVideo').src(address).show(); $('#userVideo').val(address); }
+function showVideo(address) { $('#waitText').hide(); $('#previewVideo').src(address).show(); $('#userVideo').val(address); }
 
 // $.scriptcam.pauseRecording();
 // $.scriptcam.resumeRecording();
