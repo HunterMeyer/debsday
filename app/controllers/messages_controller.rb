@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:name, :message, :photo, :video)
+    params.require(:message).permit(:name, :message, :photo, :video_path)
   end
 
 end
