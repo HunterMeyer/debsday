@@ -34,8 +34,8 @@ $(document).ready(function() {
 function enableRecord() { $('#recordButton').show(); }
 function oopsError(errorId, errorMsg) { alert(errorMsg); }
 function remaining(time) { $('#timeRemaining').text(time); }
-function showVideo(address) { $('#waitText').hide(); $('#previewVideo').src(address).show(); $('#userVideo').val(address); }
 function setVolume(value) { $('#curretVolume').text(value); }
+function showVideo(address) { $('#waitText').hide(); $('#previewVideo').attr('src', address).show(); $('#userVideo').val(address); }
 
 // $.scriptcam.pauseRecording();
 // $.scriptcam.resumeRecording();
