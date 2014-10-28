@@ -8,7 +8,8 @@ $(document).ready(function() {
     maximumTime: 90,
     timeLeft: remaining,
     fileReady: showVideo,
-    showMicrophoneErrors: true
+    showMicrophoneErrors: true,
+    setVolume: setVolume,
     showDebug: true
   });
 
@@ -17,12 +18,14 @@ $(document).ready(function() {
     $(this).hide();
     $('#finishButton').show();
     $('#time').show();
+    $('#volume').show();
   });
 
   $('#finishButton').click(function() {
     $.scriptcam.closeCamera();
     $(this).hide();
     $('#time').hide();
+    $('#volume').hide();
     $('#waitText').show();
   })
 
@@ -32,6 +35,7 @@ function enableRecord() { $('#recordButton').show(); }
 function oopsError(errorId, errorMsg) { alert(errorMsg); }
 function remaining(time) { $('#timeRemaining').text(time); }
 function showVideo(address) { $('#waitText').hide(); $('#previewVideo').src(address).show(); $('#userVideo').val(address); }
+function setVolume(value) { $('#curretVolume').text(value); }
 
 // $.scriptcam.pauseRecording();
 // $.scriptcam.resumeRecording();
