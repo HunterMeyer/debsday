@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require swfobject
+//= require platform/platform
 //= require_tree .
