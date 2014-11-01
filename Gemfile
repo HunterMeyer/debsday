@@ -13,7 +13,7 @@ gem 'awesome_print'
 gem 'emcee'
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'swfobject-rails'
+gem 'font-awesome-sass'
 
 group :production do
   gem 'rails_12factor'
