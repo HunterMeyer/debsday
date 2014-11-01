@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require platform/platform
-//= require_tree .
+//= require scripts
