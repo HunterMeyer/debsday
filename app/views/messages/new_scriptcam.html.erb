@@ -1,0 +1,36 @@
+<!-- This page is a working example of recording the webcam from the browser -->
+<!-- It uses the ScriptCam plugin but the audio is choppy -->
+
+<h1>Welcome</h1>
+<h4>Say Happy 60th to Deb Murphy</h4>
+
+<div>
+  <%= form_for @message, html: { multipart: true } do |f| %>
+    <div>
+      <%= f.label :name, 'From:' %>
+      <%= f.text_field :name, placeholder: 'Your Name', autofocus: true %>
+    </div>
+    <div style='margin-top: 10px;'>
+      <%= f.label :photo, 'Upload a Photo of You and Deb' %><br>
+      <%= f.file_field :photo %>
+    </div>
+    <div style='margin-top: 10px;'>
+      <%= f.label :video_path, 'Record a Happy Birthday Video' %><br>
+      <%= f.hidden_field :video_path, value: '', id: 'userVideo' %>
+      <div id='webcam'></div>
+      <div>
+        <span id='recordButton' class='hidden'>Record</span>
+        <span id='finishButton' class='hidden'>Finish</span>
+      </div>
+      <div id='time' class='hidden'><small>Time remaining: <span id='timeRemaining'></span></small></div>
+      <div id='volume' class='hidden'><small>Volume: <span id='curretVolume'></span></small></div>
+      <div id='waitText' class='hidden'>Please wait while we upload and process your recording...</div>
+    </div>
+    <div>
+      <video class='hidden' id='previewVideo' src='#'></video>
+    </div>
+    <div style='margin-top: 10px;'>
+      <%= f.submit 'Submit' %>
+    </div>
+  <% end %>
+</div>
