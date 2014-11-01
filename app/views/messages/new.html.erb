@@ -12,8 +12,19 @@
       <%= f.file_field :photo %>
     </div>
     <div style='margin-top: 10px;'>
-      <%= f.label :video, 'Record a Happy Birthday Video' %><br>
-      <%= f.file_field :video, accept: 'video/*', capture: 'camcorder' %>
+      <%= f.label :video_path, 'Record a Happy Birthday Video' %><br>
+      <%= f.hidden_field :video_path, value: '', id: 'userVideo' %>
+      <div id='webcam'></div>
+      <div>
+        <span id='recordButton' class='hidden'>Record</span>
+        <span id='finishButton' class='hidden'>Finish</span>
+      </div>
+      <div id='time' class='hidden'><small>Time remaining: <span id='timeRemaining'></span></small></div>
+      <div id='volume' class='hidden'><small>Volume: <span id='curretVolume'></span></small></div>
+      <div id='waitText' class='hidden'>Please wait while we upload and process your recording...</div>
+    </div>
+    <div>
+      <video class='hidden' id='previewVideo' src='#'></video>
     </div>
     <div style='margin-top: 10px;'>
       <%= f.submit 'Submit' %>
