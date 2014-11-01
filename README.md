@@ -1,4 +1,4 @@
-## DebsDay
+## DebsDay: dektop_v2
 
 #### This app allows visitors to leave a message for my friend's brithday.
 ###### You can write a note, upload a picture and/or record a video with your phone's camera.
@@ -20,4 +20,4 @@ This branch is almost identical to master with the exception that it's using **g
 - <a href='https://github.com/thoughtbot/paperclip' taget='_blank'>Paperclip</a> for uploading images
 - <a href='https://github.com/aws/aws-sdk-core-ruby' taget='_blank'>AWS-SDK</a> for storing uploads in S3
 - <a href='https://cdn.webrtc-experiment.com/MediaStreamRecorder-v1.2.js' target='_blank'>MediaStreamRecorder</a> for capturing webcam video
-- <a href='https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia'>getUserMedia</a> for capturing mic audio
+- <a href='https://developer.mozilla.org/en-US/docs/NavigatorUserMedia.getUserMedia' tagret='_blank'>getUserMedia</a> for capturing mic audio
