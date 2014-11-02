@@ -13,6 +13,9 @@ class MessagesController < ApplicationController
     end
   end
 
+  def success
+  end
+
   def destroy
     @message.find(params[:id]).destroy
     redirect_to root_path
