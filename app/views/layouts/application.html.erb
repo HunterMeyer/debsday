@@ -7,9 +7,29 @@
   <%= html_import_tag        'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body fullbleed layout vertical>
+
+  <core-header-panel flex mode='cover'>
+    <div class='core-header tall'>
+      <div class='maintext'>Happy Birthday Deb Murphy</div>
+      <div class='subtext'>
+        Join us in celebration of Deb's 60th birhday<br>
+        Share a note, a picture of the two of you, and/or record a video with your birthday wishes!
+      </div>
+      <paper-shadow z=1></paper-shadow>
+    </div>
+    <div class='content'>
+      <%= yield %>
+      <paper-shadow z=1></paper-shadow>
+    </div>
+  </core-header-panel>
+
+
+
 
 </body>
+
 </html>
+
+
