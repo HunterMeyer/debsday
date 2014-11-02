@@ -1,48 +1,28 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-body {
-  font-family: sans-serif;
-}
-
+body { background: #D5D9DF; font-family: sans-serif; }
 .hidden { display: none; }
-
-.core-header {
-  height: 60px;
-  background-color: #4F7DC9;
-  color: #FFF;
-}
-
-.maintext {
-  font-size: 24px;
-  line-height: 60px;
-}
-
-.subtext {
-  font-size: 16px;
-  margin-top: -8px;
-}
-
-.core-header.tall {
-  height: 180px;
-  text-align: center;
-}
+.core-header { height: 60px; background-color: #5AA872; color: #FFF; }
+.subheader.one { z-index: -1; width: 100%; height: 100px; background: #81C796; margin-top: 70px; }
+.subheader.two { z-index: -2; width: 100%; height: 50px; background: #BBE8C9; }
+.maintext { font-size: 24px; line-height: 60px; }
+.subtext { font-size: 16px; margin-top: -8px; }
+.core-header.tall { height: 180px; text-align: center; }
+.msg-wrapper { width: 90%; padding: 0 5% 0 5%; }
+.upload-buttons { margin-top: 20px; }
+.upload { color: #42935B; background: #FFF; }
+.finish-button { margin-top: 15px; float: right; }
+#msg-submit { color: #FFF; background: #5AA872; }
+paper-input { width: 100%; }
+paper-button {  text-transform: none; }
 
 .content {
-  height: calc(100% - 100px);
+  height: calc(100% - 120px);
   width: 80%;
   max-width: 630px;
   margin: 0 auto;
-  margin-top: 100px;
-  background: lightblue;
-}
-
-@media (max-width: 600px) {
-  .content { margin-top: 120px; height: calc(100% - 120px); }
-}
-
-paper-button {
+  margin-top: 120px;
   background: #FFF;
-  color: #4F7DC9;
-  text-transform: none;
 }
+@media (max-width: 632px) { .content { margin-top: 120px; height: calc(100% - 120px); } }
