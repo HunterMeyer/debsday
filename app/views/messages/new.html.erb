@@ -1,22 +1,23 @@
-<h1>Welcome</h1>
-<h4>Say Happy 60th to Deb Murphy</h4>
-
-<div>
-  <%= form_for @message, html: { multipart: true } do |f| %>
-    <div>
-      <%= f.label :name, 'From:' %>
-      <%= f.text_field :name, placeholder: 'Your Name', autofocus: true %>
-    </div>
-    <div style='margin-top: 10px;'>
-      <%= f.label :photo, 'Upload a Photo of You and Deb' %><br>
-      <%= f.file_field :photo %>
-    </div>
-    <div style='margin-top: 10px;'>
-      <%= f.label :video, 'Record a Happy Birthday Video' %><br>
-      <%= f.file_field :video, accept: 'video/*', capture: 'camcorder' %>
-    </div>
-    <div style='margin-top: 10px;'>
-      <%= f.submit 'Submit' %>
-    </div>
+<div class='msg-wrapper'>
+  <%= form_for @message, multipart: true do |f| %>
+    <%= f.hidden_field :name, id: 'hide-name', value: nil %>
+    <%= f.hidden_field :message, id: 'hide-msg', value: nil %>
+    <%= f.file_field   :photo, id: 'hide-pic', class: 'hidden', accept: 'image/*', capture: 'camera' %>
+    <%= f.file_field   :video, id: 'hide-vid', class: 'hidden', accept: 'video/*', capture: 'camcorder' %>
   <% end %>
+
+  <paper-input floatinglabel label='Your Name Here' maxRows=1 id='msg-name' layout vertical></paper-input>
+  <paper-input floatinglabel multiline label='Wish Deb a Happy Birthday' id='msg-msg' layout vertical></paper-input>
+
+  <paper-button raised role='button' id='msg-pic' tabindex='0' aria-label='Profile'>
+    <i class='fa fa-camera'></i> Add Picture
+  </paper-button>
+
+  <paper-button raised role='button' id='msg-vid' tabindex='0' aria-label='Profile'>
+    <i class='fa fa-video-camera'></i> Record Video
+  </paper-button>
+
+  <paper-button raised role='button' id='msg-submit' tabindex='0' aria-label='Profile'>
+    <i class='fa fa-check'></i> Finish
+  </paper-button>
 </div>
