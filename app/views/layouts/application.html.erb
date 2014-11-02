@@ -15,9 +15,15 @@
       <div class='maintext'>Happy Birthday Deb Murphy</div>
       <div class='subtext'>
         Join us in celebration of Deb's 60th birhday<br>
-        Share a note, a picture of the two of you, and/or record a video with your birthday wishes!
+        <% if !mobile_device? %>
+          Share a note, a picture of the two of you, and/or record a video with your birthday wishes!
+        <% else %>
+          Share a note with your birthday wishes and include a picture of the two if you'd like!
+        <% end %>
       </div>
       <paper-shadow z=1></paper-shadow>
+      <div class='subheader one'><paper-shadow z=1></paper-shadow></div>
+      <div class='subheader two'><paper-shadow z=1></paper-shadow></div>
     </div>
     <div class='content'>
       <%= yield %>
