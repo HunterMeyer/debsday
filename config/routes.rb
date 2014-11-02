@@ -3,6 +3,6 @@ Debsday::Application.routes.draw do
 
   root 'messages#new'
 
-  match '/success', to: 'messages#sucess', via: 'get', as: 'success'
+  match '/success', to: 'messages#success', via: 'get', as: 'success'
 
 end
