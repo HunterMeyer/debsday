@@ -7,17 +7,23 @@
   <% end %>
 
   <paper-input floatinglabel label='Your Name Here' maxRows=1 id='msg-name' layout vertical></paper-input>
-  <paper-input floatinglabel multiline label='Wish Deb a Happy Birthday' id='msg-msg' layout vertical></paper-input>
+  <paper-input floatinglabel multiline label='Your Birthday Wishes Here' id='msg-msg' layout vertical></paper-input>
 
-  <paper-button raised role='button' id='msg-pic' tabindex='0' aria-label='Profile'>
-    <i class='fa fa-camera'></i> Add Picture
-  </paper-button>
+  <div class='upload-buttons'>
+    <paper-button raised role='button' class='upload' id='msg-pic' tabindex='0' aria-label='Profile'>
+      <i class='fa fa-camera'></i> Add Picture
+    </paper-button>
 
-  <paper-button raised role='button' id='msg-vid' tabindex='0' aria-label='Profile'>
-    <i class='fa fa-video-camera'></i> Record Video
-  </paper-button>
+    <% if !mobile_device? %>
+      <paper-button raised role='button' class='upload' id='msg-vid' tabindex='0' aria-label='Profile'>
+        <i class='fa fa-video-camera'></i> Record Video
+      </paper-button>
+    <% end %>
+  </div>
 
-  <paper-button raised role='button' id='msg-submit' tabindex='0' aria-label='Profile'>
-    <i class='fa fa-check'></i> Finish
-  </paper-button>
+  <div class='finish-button'>
+    <paper-button raised role='button' id='msg-submit' tabindex='0' aria-label='Profile'>
+      <i class='fa fa-check'></i> Finish
+    </paper-button>
+  </div>
 </div>
