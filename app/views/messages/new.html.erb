@@ -1,4 +1,4 @@
-<div class='msg-wrapper'>
+<div class='inner-wrapper'>
   <%= form_for @message, multipart: true, authenticity_token: true do |f| %>
     <%= render 'error_messages' if @message.errors.any? %>
 
