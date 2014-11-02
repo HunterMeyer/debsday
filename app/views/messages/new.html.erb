@@ -10,20 +10,24 @@
   <paper-input floatinglabel multiline label='Your Birthday Wishes Here' id='msg-msg' layout vertical></paper-input>
 
   <div class='upload-buttons'>
-    <paper-button raised role='button' class='upload' id='msg-pic' tabindex='0' aria-label='Profile'>
+    <paper-button raised role='button' class='upload' id='msg-pic' tabindex='0' aria-label='Add Picture'>
       <i class='fa fa-camera'></i> Add Picture
     </paper-button>
 
     <% if mobile_device? %>
-      <paper-button raised role='button' class='upload' id='msg-vid' tabindex='0' aria-label='Profile'>
+      <paper-button raised role='button' class='upload' id='msg-vid' tabindex='0' aria-label='Record Video'>
         <i class='fa fa-video-camera'></i> Record Video
       </paper-button>
     <% end %>
   </div>
 
   <div class='finish-button'>
-    <paper-button raised role='button' id='msg-submit' tabindex='0' aria-label='Profile'>
+    <paper-button raised role='button' id='msg-submit' tabindex='0' aria-label='Create Message'>
       <i class='fa fa-check'></i> Finish
+    </paper-button>
+
+    <paper-button raised role='button' class='hidden' id='msg-loading' tabindex='0' aria-label-'Loading...'>
+      <i class='fa fa-spin fa-spinner'></i> Processing...
     </paper-button>
   </div>
 </div>
