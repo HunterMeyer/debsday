@@ -1,5 +1,7 @@
 <div class='msg-wrapper'>
-  <%= form_for @message, multipart: true do |f| %>
+  <%= form_for @message, multipart: true, authenticity_token: true do |f| %>
+    <%= render 'error_messages' if @message.errors.any? %>
+
     <%= f.hidden_field :name, id: 'hide-name', value: nil %>
     <%= f.hidden_field :message, id: 'hide-msg', value: nil %>
     <%= f.file_field   :photo, id: 'hide-pic', class: 'hidden', accept: 'image/*', capture: 'camera' %>

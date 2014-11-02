@@ -1,0 +1,6 @@
+<div id='error-msg'>
+  <b>Whoops Something Went Wrong</b>:<br>
+  <% @message.errors.full_messages.each do |e| %>
+    <li><%= e %></li>
+  <% end %>
+</div>
