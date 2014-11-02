@@ -1,0 +1,48 @@
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+body {
+  font-family: sans-serif;
+}
+
+.hidden { display: none; }
+
+.core-header {
+  height: 60px;
+  background-color: #4F7DC9;
+  color: #FFF;
+}
+
+.maintext {
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.subtext {
+  font-size: 16px;
+  margin-top: -8px;
+}
+
+.core-header.tall {
+  height: 180px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100% - 100px);
+  width: 80%;
+  max-width: 630px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: lightblue;
+}
+
+@media (max-width: 600px) {
+  .content { margin-top: 120px; height: calc(100% - 120px); }
+}
+
+paper-button {
+  background: #FFF;
+  color: #4F7DC9;
+  text-transform: none;
+}
