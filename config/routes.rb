@@ -1,6 +1,8 @@
 Debsday::Application.routes.draw do
-  resources :messages, only: [:new, :create, :success, :destroy]
+  resources :messages, only: [:new, :create, :destroy]
 
   root 'messages#new'
+
+  match '/success', to: 'messages#sucess', via: 'get', as: 'success'
 
 end
