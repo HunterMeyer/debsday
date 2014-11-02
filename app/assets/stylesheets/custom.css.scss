@@ -14,7 +14,7 @@ paper-button {  text-transform: none; }
 .inner-wrapper { width: 90%; padding: 0 5% 0 5%; }
 .upload-buttons { margin-top: 20px; }
 .upload { color: #42935B; background: #FFF; }
-.finish-button { margin-top: 15px; float: right; }
+.finish-button { margin-top: 20px; float: right; }
 #msg-submit, #send-another { color: #FFF; background: #5AA872; }
 #msg-loading { background: #DFDFDF; }
 #error-msg { padding-top: 15px; color: #E79504; }
@@ -31,3 +31,5 @@ paper-button {  text-transform: none; }
   background: #FFF;
 }
 @media (max-width: 632px) { .content { margin-top: 120px; height: calc(100% - 120px); } }
+@media (max-width: 632px) { .upload { margin-top: 15px; font-size: 14px; } .upload-buttons { margin-top: 5px; } }
+
