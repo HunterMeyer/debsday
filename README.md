@@ -15,7 +15,6 @@ This branch uses HTML5's **accept** and **capture** tags to open the user's phon
 - HTML5
 
 **Tools**
-- <a href='https://www.polymer-project.org' tagret='_blank'>Polymer</a> (Material Design) for the UI
-- <a href='https://github.com/ahuth/emcee' taget='_blank'>Emcee</a> to include web components in the Asset Pipeline
+- <a href='http://dogfalo.github.io/materialize/index.html' tagret='_blank'>Materialize</a> (Material Design) for the UI
 - <a href='https://github.com/thoughtbot/paperclip' taget='_blank'>Paperclip</a> for uploading images
 - <a href='https://github.com/aws/aws-sdk-core-ruby' taget='_blank'>AWS-SDK</a> for storing uploads in S3
