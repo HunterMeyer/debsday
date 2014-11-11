@@ -17,3 +17,6 @@
 
 # Ignore rvm
 /.rvmrc
+
+# Ignore OSX files
+.DS_Store

@@ -1,35 +1,32 @@
+@import 'materialize';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-body { background: #D5D9DF; font-family: sans-serif; }
-paper-input { width: 100%; }
-paper-button {  text-transform: none; }
-.hidden { display: none; }
-.core-header { height: 60px; background-color: #5AA872; color: #FFF; }
-.subheader.one { z-index: -1; width: 100%; height: 100px; background: #81C796; margin-top: 70px; }
-.subheader.two { z-index: -2; width: 100%; height: 50px; background: #BBE8C9; }
-.maintext { font-size: 24px; line-height: 60px; }
-.subtext { font-size: 16px; margin-top: -8px; }
-.core-header.tall { height: 180px; text-align: center; }
-.inner-wrapper { width: 90%; padding: 0 5% 0 5%; }
+body { background: #D5D9DF; }
+.hidden { display: none !important; }
+
+.content-wrapper { position: fixed; top: 0; height: 100%; margin-top: 120px; background: #FFF; }
+@media (max-width: 530px) { .content-wrapper { margin-top: 135px; } }
+.inner-wrapper { margin-top: 20px; }
+
+.header       { width: 100%; text-align: center; color: #FFF !important; font-weight: 300; }
+.header.one   { height: 310px; background-color: #BBE8C9; }
+.header.two   { height: 260px; background: #81C796; }
+.header.three { height: 180px; background: #5AA872; }
+
+.maintext { display: block; font-size: 24px; padding-top: 15px; }
+.subtext  { display: block; font-size: 16px; padding-top: 5px; }
+
 .upload-buttons { margin-top: 20px; }
 .upload { color: #42935B; background: #FFF; }
-.finish-button { margin-top: 20px; float: right; }
+#msg-pic { margin-right: 5px; }
+
+.finish-buttons { margin-top: 15px; float: right; }
 #msg-submit, #send-another { color: #FFF; background: #5AA872; }
-#msg-loading { background: #DFDFDF; }
-#error-msg { padding-top: 15px; color: #E79504; }
+#msg-loading { color: #525252; background: #DFDFDF; }
+
+#error-msg { padding-top: 10px; color: #E79504; }
+
 #success { text-align: center; }
-.success-heading { padding-top: 30px; color: #7F7F7F; }
-.success-subheading { color: #595959; }
-
-.content {
-  height: calc(100% - 120px);
-  width: 80%;
-  max-width: 630px;
-  margin: 0 auto;
-  margin-top: 120px;
-  background: #FFF;
-}
-@media (max-width: 632px) { .content { margin-top: 120px; height: calc(100% - 120px); } }
-@media (max-width: 632px) { .upload { margin-top: 15px; font-size: 14px; } .upload-buttons { margin-top: 5px; } }
-
+.success-heading    { color: #7F7F7F; padding-top: 20px; }
+.success-subheading { color: #595959; padding-top: 5px; }

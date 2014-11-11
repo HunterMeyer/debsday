@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Birhday Deb</title>
+  <title>Happy Birthday Deb Murphy!</title>
   <meta charset='utf-8'>
   <meta http-equiv='content-type' content='text/html; charset=utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= html_import_tag        'application' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 
-<body fullbleed layout vertical>
+<body>
 
-  <core-header-panel flex mode='cover'>
-    <div class='core-header tall'>
-      <div class='maintext'>Happy Birthday Deb Murphy</div>
-      <div class='subtext'>
-        Join us in celebrating Deb's 60th birthday<br>
-        <% if mobile_device? %>
-          Send a note, a picture of the two of you, and/or record a video with your birthday wishes!
-        <% else %>
-          Send your birthday wishes along with an optional picture of the two of you!
-        <% end %>
+  <div class='header one shadow'>
+    <div class='header two shadow'>
+      <div class='header three shadow'>
+        <span class='maintext'>Happy Birthday Deb Murphy</span>
+        <span class='subtext'>Join us in celebrating Deb's 60th birthday<br>
+          <% if mobile_device? %>
+            Send a note, a picture of the two of you, and/or record a video with your birthday wishes!
+          <% else %>
+            Send your birthday wishes along with an optional picture of the two of you!
+          <% end %>
+        </span>
       </div>
-      <paper-shadow z=1></paper-shadow>
-      <div class='subheader one'><paper-shadow z=1></paper-shadow></div>
-      <div class='subheader two'><paper-shadow z=1></paper-shadow></div>
     </div>
-    <div class='content'>
-      <%= yield %>
-      <paper-shadow z=1></paper-shadow>
-    </div>
-  </core-header-panel>
+  </div>
+
+  <%= yield %>
 
 </body>
-
+  <%= javascript_include_tag 'application' %>
 </html>
-
-

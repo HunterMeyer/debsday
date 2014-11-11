@@ -1,35 +1,38 @@
-<div class='inner-wrapper'>
-  <%= form_for @message, multipart: true, authenticity_token: true do |f| %>
-    <%= render 'error_messages' if @message.errors.any? %>
+<div class='row'>
+  <div class='col s10 offset-s1 m8 offset-m2 l6 offset-l3 content-wrapper shadow'>
+    <div class='row inner-wrapper'>
+      <%= form_for @message, multipart: true, html: { class: 'col s12 m10 offset-m1 l10 offset-l1', id: 'new-msg' } do |f| %>
+        <%= render 'error_messages' if @message.errors.any? %>
+        <div class='col s12'>
+          <%= f.text_field :name, placeholder: 'Your Name Here' %>
+        </div>
+        <div class='col s12'>
+          <%= f.text_field :message, placeholder: 'Your Birthday Wishes Here' %>
+        </div>
+        <%= f.file_field   :photo, id: 'hide-pic', class: 'hidden', accept: 'image/*', capture: 'camera' %>
+        <%= f.file_field   :video, id: 'hide-vid', class: 'hidden', accept: 'video/*', capture: 'camcorder' %>
+      <% end %>
 
-    <%= f.hidden_field :name, id: 'hide-name', value: nil %>
-    <%= f.hidden_field :message, id: 'hide-msg', value: nil %>
-    <%= f.file_field   :photo, id: 'hide-pic', class: 'hidden', accept: 'image/*', capture: 'camera' %>
-    <%= f.file_field   :video, id: 'hide-vid', class: 'hidden', accept: 'video/*', capture: 'camcorder' %>
-  <% end %>
+      <div class='col s12 m10 offset-m1 l10 offset-l1 upload-buttons'>
+        <a class='waves-effect button raised waves-ripple upload' id='msg-pic'>
+          <i class='fa fa-camera'></i> Add Photo
+        </a>
+        <% if mobile_device? %>
+          <a class='waves-effect button raised waves-ripple upload' id='msg-vid'>
+            <i class='fa fa-video-camera'></i> Record Video
+          </a>
+        <% end %>
+      </div>
 
-  <paper-input floatinglabel label='Your Name Here' maxRows=1 id='msg-name' layout vertical></paper-input>
-  <paper-input floatinglabel multiline label='Your Birthday Wishes Here' id='msg-msg' layout vertical></paper-input>
+      <div class='col s12 m10 offset-m1 l10 offset-l1 finish-buttons'>
+        <a class='waves-effect button raised waves-ripple pull-right' id='msg-submit'>
+          <i class='fa fa-check'></i> Finish
+        </a>
+        <a class='waves-effect button raised waves-ripple pull-right hidden' id='msg-loading'>
+          <i class='fa fa-spin fa-spinner'></i> Processing...
+        </a>
+      </div>
 
-  <div class='upload-buttons'>
-    <paper-button raised role='button' class='upload' id='msg-pic' tabindex='0' aria-label='Add Picture'>
-      <i class='fa fa-camera'></i> Add Picture
-    </paper-button>
-
-    <% if mobile_device? %>
-      <paper-button raised role='button' class='upload' id='msg-vid' tabindex='0' aria-label='Record Video'>
-        <i class='fa fa-video-camera'></i> Record Video
-      </paper-button>
-    <% end %>
-  </div>
-
-  <div class='finish-button'>
-    <paper-button raised role='button' id='msg-submit' tabindex='0' aria-label='Create Message'>
-      <i class='fa fa-check'></i> Finish
-    </paper-button>
-
-    <paper-button raised role='button' class='hidden' id='msg-loading' tabindex='0' aria-label-'Loading...'>
-      <i class='fa fa-spin fa-spinner'></i> Processing...
-    </paper-button>
+    </div>
   </div>
 </div>

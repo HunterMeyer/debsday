@@ -7,9 +7,7 @@ $(document).ready(function() {
   $('#msg-submit').click(function() {
     $(this).hide();
     $('#msg-loading').removeClass('hidden');
-    $('#hide-name').val($('#msg-name').val());
-    $('#hide-msg').val($('#msg-msg').val());
-    $('#new_message').submit();
+    $('#new-msg').submit();
   });
 
 });
