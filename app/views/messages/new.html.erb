@@ -4,10 +4,12 @@
       <%= form_for @message, multipart: true, html: { class: 'col s12 m10 offset-m1 l10 offset-l1', id: 'new-msg' } do |f| %>
         <%= render 'error_messages' if @message.errors.any? %>
         <div class='col s12'>
-          <%= f.text_field :name, placeholder: 'Your Name Here' %>
+          <%= f.label :name, 'Your Name Here' %>
+          <%= f.text_field :name %>
         </div>
         <div class='col s12'>
-          <%= f.text_field :message, placeholder: 'Your Birthday Wishes Here' %>
+          <%= f.label :message, 'Your Birthday Wishes Here' %>
+          <%= f.text_field :message %>
         </div>
         <%= f.file_field   :photo, id: 'hide-pic', class: 'hidden', accept: 'image/*', capture: 'camera' %>
         <%= f.file_field   :video, id: 'hide-vid', class: 'hidden', accept: 'video/*', capture: 'camcorder' %>
