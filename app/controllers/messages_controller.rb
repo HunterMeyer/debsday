@@ -1,4 +1,9 @@
 class MessagesController < ApplicationController
+  http_basic_authenticate_with name: ENV['DEBS_UN'], password: ENV['DEBS_PW'], only: 'index'
+
+  def index
+    @messages = Message.all
+  end
 
   def new
     @message = Message.new
