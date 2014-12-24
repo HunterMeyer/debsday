@@ -1,5 +1,5 @@
 Debsday::Application.routes.draw do
-  resources :messages, only: [:new, :create, :destroy]
+  resources :messages, except: [:show]
 
   root 'messages#new'
 
