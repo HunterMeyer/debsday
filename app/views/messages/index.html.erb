@@ -1,0 +1,27 @@
+<div class='row'>
+  <div class='col s10 offset-s1 m8 offset-m2 l6 offset-l3 content-wrapper'>
+      <% @messages.all.each do |m| %>
+        <div class='outer shadow'>
+          <div class='inner'>
+            <h4 class='name'><%= m.name %></h4>
+            <div class='message'><%= m.message %></div>
+            <% if m.photo.present? %>
+              <div class='media-wrapper'>
+                <%= image_tag m.photo.url, class: 'media shadow' %>
+              </div>
+            <% end %>
+            <% if m.video.present? %>
+              <div class='media-wrapper'>
+                <%= video_tag m.video.url, controls: true, class: 'media shadow' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<style>
+ .content-wrapper { margin-top: -200px;}
+</style>
